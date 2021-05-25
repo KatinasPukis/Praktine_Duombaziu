@@ -21,6 +21,12 @@ namespace Praktine_Duombaziu
         {
             //test
             //dusk
+            MessageBox.Show("narkomanas");
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
