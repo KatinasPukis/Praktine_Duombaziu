@@ -1,0 +1,9 @@
+C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\bin\Debug\Praktine_Duombaziu.exe.config
+C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\bin\Debug\Praktine_Duombaziu.exe
+C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\bin\Debug\Praktine_Duombaziu.pdb
+C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.Properties.Resources.resources
+C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.csproj.GenerateResource.cache
+C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.csproj.CoreCompileInputs.cache
+C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.exe
+C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.pdb
+C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.csprojAssemblyReference.cache
