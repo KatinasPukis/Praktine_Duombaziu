@@ -16,6 +16,7 @@ namespace Praktine_Duombaziu.Models
             AkcijosID = akcijosid;
             KlientoID = klientoid;
             Nuolaida = nuolaida;
+            //tikrinam sudus
         }
     }
 }
