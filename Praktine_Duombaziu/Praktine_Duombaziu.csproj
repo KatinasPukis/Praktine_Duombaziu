@@ -59,6 +59,7 @@
     <Compile Include="Models\IsvezamaPreke.cs" />
     <Compile Include="Models\Isvezimas.cs" />
     <Compile Include="Models\Ivertinimas.cs" />
+    <Compile Include="Models\Transportas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
