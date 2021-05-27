@@ -33,7 +33,6 @@
             this.loadButton = new System.Windows.Forms.Button();
             this.CreateButton = new System.Windows.Forms.Button();
             this.UpdateButton = new System.Windows.Forms.Button();
-            this.ReadButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +68,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(124, 105);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(664, 321);
             this.dataGridView1.TabIndex = 1;
@@ -96,25 +96,16 @@
             // 
             // UpdateButton
             // 
-            this.UpdateButton.Location = new System.Drawing.Point(31, 221);
+            this.UpdateButton.Location = new System.Drawing.Point(31, 164);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(87, 37);
             this.UpdateButton.TabIndex = 4;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.UseVisualStyleBackColor = true;
             // 
-            // ReadButton
-            // 
-            this.ReadButton.Location = new System.Drawing.Point(31, 164);
-            this.ReadButton.Name = "ReadButton";
-            this.ReadButton.Size = new System.Drawing.Size(87, 37);
-            this.ReadButton.TabIndex = 5;
-            this.ReadButton.Text = "Read";
-            this.ReadButton.UseVisualStyleBackColor = true;
-            // 
             // DeleteButton
             // 
-            this.DeleteButton.Location = new System.Drawing.Point(31, 286);
+            this.DeleteButton.Location = new System.Drawing.Point(31, 220);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(87, 37);
             this.DeleteButton.TabIndex = 6;
@@ -127,7 +118,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.DeleteButton);
-            this.Controls.Add(this.ReadButton);
             this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.CreateButton);
             this.Controls.Add(this.loadButton);
@@ -148,7 +138,6 @@
         private System.Windows.Forms.Button loadButton;
         private System.Windows.Forms.Button CreateButton;
         private System.Windows.Forms.Button UpdateButton;
-        private System.Windows.Forms.Button ReadButton;
         private System.Windows.Forms.Button DeleteButton;
     }
 }

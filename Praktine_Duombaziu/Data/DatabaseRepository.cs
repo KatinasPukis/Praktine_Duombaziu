@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Windows.Forms;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,51 @@ namespace Praktine_Duombaziu.Data
         {
             conn = new SqlConnection(@"Server=.;Database=duombaze;Trusted_Connection=true;");
         }
+
+        public void addDataToTable(string tableName, DataGridViewRow newData, DataGridViewColumnCollection columns)
+        {
+            try
+            {
+                string sql = "insert into ";
+                sql += $"{tableName} (";
+                for(int i = 1; i < columns.Count; i++)
+                {
+                    if(i != columns.Count - 1)
+                    {
+                        sql += $"{columns[i].Name}, ";
+                    }
+                    else
+                    {
+                        sql += $"{columns[i].Name}) values (";
+                    }
+                }
+                for (int i = 1; i < columns.Count; i++)
+                {
+                    if (i != columns.Count - 1)
+                    {
+                        sql += $"@{columns[i].Name}, ";
+                    }
+                    else
+                    {
+                        sql += $"@{columns[i].Name})";
+                    }
+                }
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                for (int i = 1; i < columns.Count; i++)
+                {
+                    cmd.Parameters.AddWithValue($"@{columns[i].Name}", newData.Cells[i].Value);
+                }
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show($"Ideta i {tableName} lentele");
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+        }
+
         public List<Adresas> GetAdresas()
         {
             List<Adresas> adresuList = new List<Adresas>();

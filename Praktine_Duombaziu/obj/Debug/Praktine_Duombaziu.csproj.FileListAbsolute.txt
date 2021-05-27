@@ -8,3 +8,13 @@ C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Prak
 C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.pdb
 C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.csprojAssemblyReference.cache
 C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.Form1.resources
+C:\Users\valde\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\bin\Debug\Praktine_Duombaziu.exe.config
+C:\Users\valde\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\bin\Debug\Praktine_Duombaziu.exe
+C:\Users\valde\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\bin\Debug\Praktine_Duombaziu.pdb
+C:\Users\valde\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.csprojAssemblyReference.cache
+C:\Users\valde\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.Form1.resources
+C:\Users\valde\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.Properties.Resources.resources
+C:\Users\valde\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.csproj.GenerateResource.cache
+C:\Users\valde\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.csproj.CoreCompileInputs.cache
+C:\Users\valde\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.exe
+C:\Users\valde\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.pdb

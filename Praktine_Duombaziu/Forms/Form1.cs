@@ -63,11 +63,6 @@ namespace Praktine_Duombaziu
             dataAdapter.Fill(ds);
             dataGridView1.ReadOnly = false;
             dataGridView1.DataSource = ds.Tables[0];
-
-
-
-
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -77,9 +72,14 @@ namespace Praktine_Duombaziu
 
         private void CreateButton_Click(object sender, EventArgs e)
         {
-            string selection = comboBox1.SelectedItem.ToString();
-
-            
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                repository.addDataToTable(comboBox1.Text, dataGridView1.SelectedRows[0], dataGridView1.Columns);
+            }
+            else
+            {
+                MessageBox.Show("Pasirinkite eilute!");
+            }
         }
     }
 }
