@@ -54,6 +54,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 throw new Exception(exc.Message);
             }
         }
@@ -87,6 +88,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 MessageBox.Show(exc.Message);
             }
         }
@@ -106,6 +108,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 throw new Exception(exc.Message);
             }
         }
