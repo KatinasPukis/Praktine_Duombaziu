@@ -52,8 +52,8 @@ namespace Praktine_Duombaziu
 
         private void loadButton_Click(object sender, EventArgs e)
         {
-            string test = comboBox1.SelectedItem.ToString();
-            var select = $"SELECT * FROM {test}";
+            string selection = comboBox1.SelectedItem.ToString();
+            var select = $"SELECT * FROM {selection}";
             conn = new SqlConnection(@"Server=.;Database=duombaze;Trusted_Connection=true;");
             var dataAdapter = new SqlDataAdapter(select, conn);
             var commandBuilder = new SqlCommandBuilder(dataAdapter);
