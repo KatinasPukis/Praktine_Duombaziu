@@ -74,5 +74,64 @@ namespace Praktine_Duombaziu.Data
 
             return akcijusList;
         }
+        public List<Apmokejimas> GetApmokejimas()
+        {
+            List<Apmokejimas> apmokejimuList = new List<Apmokejimas>();
+            try
+            {
+                string sql = "select ApmokejimoID, Apmokejimo_Tipas, Suma, ApmokejimoLaikas from Apmokejimas";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int ApmokejimoID = int.Parse(reader["ApmokejimoID"].ToString());
+                    string Apmokejimo_Tipas = reader["Apmokejimo_Tipas"].ToString();
+                    double Suma = double.Parse(reader["Suma"].ToString());
+                    DateTime ApmokejimoLaikas = DateTime.Parse(reader["ApmokejimoLaikas"].ToString());
+
+                    apmokejimuList.Add(new Apmokejimas(ApmokejimoID,Apmokejimo_Tipas,Suma,ApmokejimoLaikas));
+                }
+
+                conn.Close();
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine(exc.Message);
+            }
+
+            return apmokejimuList;
+        }
+        public List<IsvezamaPreke> GetIsvezamaPreke()
+        {
+            List<IsvezamaPreke> isvezamaPrekeList = new List<IsvezamaPreke>();
+            try
+            {
+                string sql = "select OperacijosNr, IsvezamosTechnikosPav, Kiekis, UzsakymoID, IsvezimoID from IsvezamaPreke";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int OperacijosNr = int.Parse(reader["OperacijosNr"].ToString());
+                    string IsvezamostechnikosPav = reader["IsvezamosTechnikosPav"].ToString();
+                    int Kiekis = int.Parse(reader["Kiekis"].ToString());
+                    int UzsakymoID = int.Parse(reader["UzsakymoID"].ToString());
+                    int IsvezimoID = int.Parse(reader["IsvezimoID"].ToString());
+
+                    isvezamaPrekeList.Add(new IsvezamaPreke(OperacijosNr,IsvezamostechnikosPav,Kiekis,UzsakymoID,IsvezimoID));
+                }
+
+                conn.Close();
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine(exc.Message);
+            }
+
+            return isvezamaPrekeList;
+        }
     }
 }

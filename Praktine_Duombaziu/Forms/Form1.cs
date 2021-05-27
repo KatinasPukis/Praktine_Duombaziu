@@ -34,6 +34,7 @@ namespace Praktine_Duombaziu
         {
             List<Klientas> klientuList = repository.GetKlientas();
             List<Akcija> akcijuList = repository.GetAkcija();
+            List<Apmokejimas> apmokejimuList = repository.GetApmokejimas();
             
         }
     }
