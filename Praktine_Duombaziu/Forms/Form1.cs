@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Praktine_Duombaziu.Data;
+using Praktine_Duombaziu.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace Praktine_Duombaziu
 {
     public partial class Form1 : Form
     {
+        public DatabaseRepository repository = new DatabaseRepository();
         public Form1()
         {
             InitializeComponent();
@@ -27,6 +30,12 @@ namespace Praktine_Duombaziu
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void loadButton_Click(object sender, EventArgs e)
+        {
+            List<Klientas> klientuList = repository.GetKlientas();
+            Console.WriteLine("test");
         }
     }
 }
