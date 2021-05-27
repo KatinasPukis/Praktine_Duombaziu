@@ -16,6 +16,40 @@ namespace Praktine_Duombaziu.Data
         {
             conn = new SqlConnection(@"Server=.;Database=duombaze;Trusted_Connection=true;");
         }
+        public List<Adresas> GetAdresas()
+        {
+            List<Adresas> adresuList = new List<Adresas>();
+            try
+            {
+                string sql = "select AdresoID, Salis, Miestas, Gatve, Namo_Nr, Buto_Nr, Pasto_Indeksas, KlientoID  from Adresas";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int AdresoID = int.Parse(reader["AdresoID"].ToString());
+                    string Salis = reader["Salis"].ToString();
+                    string Miestas = reader["Miestas"].ToString();
+                    string Gatve = reader["Gatve"].ToString();
+                    int Namo_Nr = int.Parse(reader["Namo_Nr"].ToString());
+                    int Buto_Nr = int.Parse(reader["Buto_Nr"].ToString());
+                    string Pasto_Indeksas = reader["Pasto_Indeksas"].ToString();
+                    int KlientoID = int.Parse(reader["KlientoID"].ToString());
+
+
+                    adresuList.Add(new Adresas(AdresoID,Salis,Miestas,Gatve,Namo_Nr,Buto_Nr,Pasto_Indeksas,KlientoID));
+                }
+
+                conn.Close();
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine(exc.Message);
+            }
+
+            return adresuList;
+        }
         public List<Akcija> GetAkcija()
         {
             List<Akcija> akcijusList = new List<Akcija>();

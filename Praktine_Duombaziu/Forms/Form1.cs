@@ -18,21 +18,7 @@ namespace Praktine_Duombaziu
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void loadButton_Click(object sender, EventArgs e)
-        {
-           
+            List<Adresas> adresuList = repository.GetAdresas();
             List<Akcija> akcijuList = repository.GetAkcija();
             List<Apmokejimas> apmokejimuList = repository.GetApmokejimas();
             List<IsvezamaPreke> isvezamaPrekesList = repository.GetIsvezamaPreke();
@@ -50,8 +36,31 @@ namespace Praktine_Duombaziu
             List<UzsakymoIstorija> uzsakymoIstorijasList = repository.GetUzsakymoIstorija();
             List<UzsakymoPreke> uzsakymoPrekesList = repository.GetUzsakymoPreke();
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void loadButton_Click(object sender, EventArgs e)
+        {
+           
+            
+
+
 
             
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
