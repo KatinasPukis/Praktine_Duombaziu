@@ -78,14 +78,14 @@ namespace Praktine_Duombaziu.Data
             List<IsvezamaPreke> isvezamaPrekeList = new List<IsvezamaPreke>();
             try
             {
-                string sql = "select OperacijosNr, IsvezamosTechnikosPav, Kiekis, UzsakymoID, IsvezimoID from IsvezamaPreke";
+                string sql = "select OpreacijosNr, IsvezamosTechnikosPav, Kiekis, UzsakymoID, IsvezimoID from IsvezamaPreke";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    int OperacijosNr = int.Parse(reader["OperacijosNr"].ToString());
+                    int OperacijosNr = int.Parse(reader["OpreacijosNr"].ToString());
                     string IsvezamostechnikosPav = reader["IsvezamosTechnikosPav"].ToString();
                     int Kiekis = int.Parse(reader["Kiekis"].ToString());
                     int UzsakymoID = int.Parse(reader["UzsakymoID"].ToString());
@@ -108,7 +108,7 @@ namespace Praktine_Duombaziu.Data
             List<Isvezimas> isvezamasList = new List<Isvezimas>();
             try
             {
-                string sql = "select IsvezimoID, Nurodytas_Adresas, Nurodytas_Laikas, KurjerioID from Isvezimas";
+                string sql = "select IsvezimoID, Nurodytas_Adresas, Nurodytas_Laikas, KujerioID from Isvezimas";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -118,7 +118,7 @@ namespace Praktine_Duombaziu.Data
                     int IsvezimoID = int.Parse(reader["IsvezimoID"].ToString());
                     string Nurodytas_Adresas = reader["Nurodytas_Adresas"].ToString();
                     DateTime Nurodytas_Laikas = DateTime.Parse(reader["Nurodytas_Laikas"].ToString());
-                    int KurjerioID = int.Parse(reader["KurjerioID"].ToString());
+                    int KurjerioID = int.Parse(reader["KujerioID"].ToString());
 
                     isvezamasList.Add(new Isvezimas(IsvezimoID,Nurodytas_Adresas,Nurodytas_Laikas,KurjerioID));
                 }
@@ -137,7 +137,7 @@ namespace Praktine_Duombaziu.Data
             List<Ivertinimas> ivertinimasList = new List<Ivertinimas>();
             try
             {
-                string sql = "select IvertinimoID, Kurjerio_Ivertinmas, Produkto_Ivertinimas, Komentaras, KlientoID, UzsakymoID from Ivertinimas";
+                string sql = "select IvertinimoID, Kurjerio_Ivertinimas, Produkto_Ivertinimas, Komentaras, KlientoID, UzsakymoID from Ivertinimas";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 conn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
