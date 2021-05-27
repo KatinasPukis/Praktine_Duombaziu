@@ -8,3 +8,4 @@ C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Prak
 C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.pdb
 C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.csprojAssemblyReference.cache
 C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.Form1.resources
+C:\Users\domin\source\repos\Praktine_Duombaziu\Praktine_Duombaziu\obj\Debug\Praktine_Duombaziu.Forms.AddNewTable.resources

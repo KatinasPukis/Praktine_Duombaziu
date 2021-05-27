@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Praktine_Duombaziu.Data;
+using Praktine_Duombaziu.Models;
 
 namespace Praktine_Duombaziu
 {
@@ -59,7 +61,7 @@ namespace Praktine_Duombaziu
             var commandBuilder = new SqlCommandBuilder(dataAdapter);
             var ds = new DataSet();
             dataAdapter.Fill(ds);
-            dataGridView1.ReadOnly = true;
+            dataGridView1.ReadOnly = false;
             dataGridView1.DataSource = ds.Tables[0];
 
 
@@ -71,6 +73,13 @@ namespace Praktine_Duombaziu
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void CreateButton_Click(object sender, EventArgs e)
+        {
+            string selection = comboBox1.SelectedItem.ToString();
+
+            
         }
     }
 }

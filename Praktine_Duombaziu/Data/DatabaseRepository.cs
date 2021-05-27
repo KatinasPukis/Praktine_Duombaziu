@@ -533,5 +533,6 @@ namespace Praktine_Duombaziu.Data
 
             return prekes;
         }
+        
     }
 }

@@ -92,6 +92,7 @@
             this.CreateButton.TabIndex = 3;
             this.CreateButton.Text = "Create";
             this.CreateButton.UseVisualStyleBackColor = true;
+            this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
             // 
             // UpdateButton
             // 
