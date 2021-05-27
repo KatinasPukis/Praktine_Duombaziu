@@ -32,9 +32,25 @@ namespace Praktine_Duombaziu
 
         private void loadButton_Click(object sender, EventArgs e)
         {
-            List<Klientas> klientuList = repository.GetKlientas();
+           
             List<Akcija> akcijuList = repository.GetAkcija();
             List<Apmokejimas> apmokejimuList = repository.GetApmokejimas();
+            List<IsvezamaPreke> isvezamaPrekesList = repository.GetIsvezamaPreke();
+            List<Isvezimas> isvezimasList = repository.GetIsvezimas();
+            List<Ivertinimas> ivertinimuList = repository.GetIvertinimas();
+            List<Klientas> klientuList = repository.GetKlientas();
+            List<Kurjerio_transportas> kurjerio_TransportuList = repository.GetKurjerio_Transportas();
+            List<Kurjeris> kurjeriuList = repository.GetKurjeris();
+            List<Partnere_imone> partnere_ImoniuList = repository.GetPartnereImone();
+            List<Partneres_imones_meniu> partneres_Imones_MeniuList = repository.GetPartneresImonesMeniu();
+            List<Pristatymas> pristatymuList = repository.GetPristatymas();
+            List<TechninePagalba> techninePagalbaList = repository.GetTechninePagalba();
+            List<Transportas> transportoList = repository.GetTransportas();
+            List<Uzsakymas> uzsakymoList = repository.GetUzsakymas();
+            List<UzsakymoIstorija> uzsakymoIstorijasList = repository.GetUzsakymoIstorija();
+            List<UzsakymoPreke> uzsakymoPrekesList = repository.GetUzsakymoPreke();
+
+
             
         }
     }

@@ -60,6 +60,11 @@
     <Compile Include="Models\Isvezimas.cs" />
     <Compile Include="Models\Ivertinimas.cs" />
     <Compile Include="Models\Klientas.cs" />
+    <Compile Include="Models\Kurjerio_transportas.cs" />
+    <Compile Include="Models\Kurjeris.cs" />
+    <Compile Include="Models\Partneres_imones_meniu.cs" />
+    <Compile Include="Models\Partnere_imone.cs" />
+    <Compile Include="Models\Pristatymas.cs" />
     <Compile Include="Models\TechninePagalba.cs" />
     <Compile Include="Models\Transportas.cs" />
     <Compile Include="Models\Uzsakymas.cs" />
@@ -97,6 +102,9 @@
   <ItemGroup>
     <Content Include="bin\Debug\Praktine_Duombaziu.exe" />
     <Content Include="bin\Debug\Praktine_Duombaziu.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -223,6 +223,37 @@ namespace Praktine_Duombaziu.Data
 
             return kurjerio_TransportasList;
         }
+        public List<Kurjeris> GetKurjeris()
+        {
+            List<Kurjeris> kurjeriai = new List<Kurjeris>();
+            try
+            {
+                string sql = "select KurjerioID, Vardas, Pavarde, ElPastas, TelNr, TransportoID from Kurjeris";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int kurjerio_id = int.Parse(reader["KurjerioID"].ToString());
+                    string vardas = reader["Vardas"].ToString();
+                    string pavarde = reader["Pavarde"].ToString();
+                    string el_pastas = reader["ElPastas"].ToString();
+                    string tel_nr = reader["TelNr"].ToString();
+                    int transporto_id = int.Parse(reader["TransportoID"].ToString());
+
+                    kurjeriai.Add(new Kurjeris(kurjerio_id, vardas, pavarde, el_pastas, tel_nr, transporto_id));
+                }
+
+                conn.Close();
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine(exc.Message);
+            }
+
+            return kurjeriai;
+        }
         public List<Partnere_imone> GetPartnereImone()
         {
             List<Partnere_imone> imones = new List<Partnere_imone>();
@@ -373,7 +404,7 @@ namespace Praktine_Duombaziu.Data
             return transportai;
         }
 
-        public List<Uzsakymas> GetUzsakymass()
+        public List<Uzsakymas> GetUzsakymas()
         {
             List<Uzsakymas> uzsakymai = new List<Uzsakymas>();
             try
