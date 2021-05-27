@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Windows.Forms;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Praktine_Duombaziu.Models;
 
 namespace Praktine_Duombaziu.Data
@@ -22,8 +19,7 @@ namespace Praktine_Duombaziu.Data
         {
             try
             {
-                string sql = "insert into ";
-                sql += $"{tableName} (";
+                string sql = $"insert into {tableName} (";
                 for(int i = 1; i < columns.Count; i++)
                 {
                     if(i != columns.Count - 1)
@@ -54,11 +50,63 @@ namespace Praktine_Duombaziu.Data
                 conn.Open();
                 cmd.ExecuteNonQuery();
                 conn.Close();
-                MessageBox.Show($"Ideta i {tableName} lentele");
+                MessageBox.Show($"Ideta i [{tableName}] lentele");
+            }
+            catch (Exception exc)
+            {
+                throw new Exception(exc.Message);
+            }
+        }
+
+        public void updateDataInTable(string tableName, DataGridViewRow newData, DataGridViewColumnCollection columns)
+        {
+            try
+            {
+                string sql = $"update {tableName} set ";
+                for (int i = 1; i < columns.Count; i++)
+                {
+                    if (i != columns.Count - 1)
+                    {
+                        sql += $"{columns[i].Name}=@{columns[i].Name}, ";
+                    }
+                    else
+                    {
+                        sql += $"{columns[i].Name}=@{columns[i].Name} where ";
+                    }
+                }
+                sql += $"{columns[0].Name}=@{ columns[0].Name}";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                for (int i = 0; i < columns.Count; i++)
+                {
+                    cmd.Parameters.AddWithValue($"@{columns[i].Name}", newData.Cells[i].Value);
+                }
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show($"Irasas lenteleje [{tableName}] atnaujintas");
             }
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
+            }
+        }
+
+        public void deleteDataFromTable(string tableName, DataGridViewRow newData, DataGridViewColumnCollection columns)
+        {
+            try
+            {
+                string sql = $"delete from {tableName} where ";
+                sql += $"{columns[0].Name}=@{ columns[0].Name}";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue($"@{columns[0].Name}", newData.Cells[0].Value);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+                MessageBox.Show($"Irasas istrintas is [{tableName}] ");
+            }
+            catch (Exception exc)
+            {
+                throw new Exception(exc.Message);
             }
         }
 

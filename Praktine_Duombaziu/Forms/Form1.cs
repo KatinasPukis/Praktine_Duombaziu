@@ -2,16 +2,9 @@
 using Praktine_Duombaziu.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Praktine_Duombaziu.Data;
-using Praktine_Duombaziu.Models;
 
 namespace Praktine_Duombaziu
 {
@@ -39,17 +32,6 @@ namespace Praktine_Duombaziu
             List<Uzsakymas> uzsakymoList = repository.GetUzsakymas();
             List<UzsakymoIstorija> uzsakymoIstorijasList = repository.GetUzsakymoIstorija();
             List<UzsakymoPreke> uzsakymoPrekesList = repository.GetUzsakymoPreke();
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void loadButton_Click(object sender, EventArgs e)
@@ -65,21 +47,48 @@ namespace Praktine_Duombaziu
             dataGridView1.DataSource = ds.Tables[0];
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void CreateButton_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 1)
             {
-                repository.addDataToTable(comboBox1.Text, dataGridView1.SelectedRows[0], dataGridView1.Columns);
+                try
+                {
+                    repository.addDataToTable(comboBox1.Text, dataGridView1.SelectedRows[0], dataGridView1.Columns);
+                    loadButton_Click(sender, e);
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show(exc.Message);
+                }
             }
             else
-            {
                 MessageBox.Show("Pasirinkite eilute!");
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            if(dataGridView1.SelectedRows.Count == 1)
+                repository.updateDataInTable(comboBox1.Text, dataGridView1.SelectedRows[0], dataGridView1.Columns);
+            else
+                MessageBox.Show("Pasirinkite eilute!");
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                try
+                {
+                    repository.deleteDataFromTable(comboBox1.Text, dataGridView1.SelectedRows[0], dataGridView1.Columns);
+                    dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
+                }
+                catch(Exception exc)
+                {
+                    MessageBox.Show(exc.Message);
+                }
             }
+            else
+                MessageBox.Show("Pasirinkite eilute!");
         }
     }
 }
