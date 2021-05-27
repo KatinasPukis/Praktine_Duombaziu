@@ -41,6 +41,24 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Adresas",
+            "Akcija",
+            "Apmokejimas",
+            "IsvezamaPreke",
+            "Isvezimas",
+            "Ivertinimas",
+            "Klientas",
+            "Kurjerio_transportas",
+            "Kurjeris",
+            "Partnere_Imone",
+            "Partneres_Imones_Meniu",
+            "Pristatymas",
+            "Technine_pagalba",
+            "Transportas",
+            "Uzsakymas",
+            "Uzsakymo_Istorija",
+            "Uzsakymo_Preke"});
             this.comboBox1.Location = new System.Drawing.Point(124, 67);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(230, 21);

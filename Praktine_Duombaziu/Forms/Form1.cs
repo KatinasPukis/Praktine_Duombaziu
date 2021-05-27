@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace Praktine_Duombaziu
     public partial class Form1 : Form
     {
         public DatabaseRepository repository = new DatabaseRepository();
+        private SqlConnection conn;
         public Form1()
         {
             InitializeComponent();
@@ -50,12 +52,20 @@ namespace Praktine_Duombaziu
 
         private void loadButton_Click(object sender, EventArgs e)
         {
-           
-            
+            string test = comboBox1.SelectedItem.ToString();
+            var select = $"SELECT * FROM {test}";
+            conn = new SqlConnection(@"Server=.;Database=duombaze;Trusted_Connection=true;");
+            var dataAdapter = new SqlDataAdapter(select, conn);
+            var commandBuilder = new SqlCommandBuilder(dataAdapter);
+            var ds = new DataSet();
+            dataAdapter.Fill(ds);
+            dataGridView1.ReadOnly = true;
+            dataGridView1.DataSource = ds.Tables[0];
 
 
 
-            
+
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
