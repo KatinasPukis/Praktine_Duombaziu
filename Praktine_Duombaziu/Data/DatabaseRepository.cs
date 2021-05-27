@@ -46,5 +46,33 @@ namespace Praktine_Duombaziu.Data
 
             return klientuList;
         }
+        public List<Akcija> GetAkcija()
+        {
+            List<Akcija> akcijusList = new List<Akcija>();
+            try
+            {
+                string sql = "select AkcijosID, KlientoID, Nuolaida from Akcija";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                conn.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int AkcijosID = int.Parse(reader["AkcijosID"].ToString());
+                    int KlientoID = int.Parse(reader["KlientoID"].ToString());
+                    int Nuolaida = int.Parse(reader["Nuolaida"].ToString());
+                   
+                    akcijusList.Add(new Akcija(AkcijosID, KlientoID, Nuolaida));
+                }
+
+                conn.Close();
+            }
+            catch (Exception exc)
+            {
+                Debug.WriteLine(exc.Message);
+            }
+
+            return akcijusList;
+        }
     }
 }

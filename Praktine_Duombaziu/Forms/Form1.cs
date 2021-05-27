@@ -22,9 +22,7 @@ namespace Praktine_Duombaziu
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //test
-            //dusk
-            MessageBox.Show("narkomanas");
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -35,7 +33,8 @@ namespace Praktine_Duombaziu
         private void loadButton_Click(object sender, EventArgs e)
         {
             List<Klientas> klientuList = repository.GetKlientas();
-            Console.WriteLine("test");
+            List<Akcija> akcijuList = repository.GetAkcija();
+            
         }
     }
 }
