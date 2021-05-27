@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Praktine.Models
+namespace Praktine_Duombaziu.Models
 {
     public class Uzsakymas
     {

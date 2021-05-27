@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Praktine_Duombaziu.Models
 {
-    class Kurjerio_transportas
+    public class Kurjerio_transportas
     {
         public int id { get; set; }
         public int kurjerio_id { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Praktine_Duombaziu.Models
 {
-    class Partnere_imone
+   public  class Partnere_imone
     {
         public int imones_id { get; set; }
         public string pavadinimas{ get; set; }

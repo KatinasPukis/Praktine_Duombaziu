@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Praktine_Duombaziu.Models
 {
-    class Partneres_imones_meniu
+    public class Partneres_imones_meniu
     {
         public int id { get; set; }
         public string produkto_tipas { get; set; }
