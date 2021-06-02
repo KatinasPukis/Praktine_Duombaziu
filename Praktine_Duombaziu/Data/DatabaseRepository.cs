@@ -142,6 +142,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -170,6 +171,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -199,6 +201,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -229,6 +232,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -258,6 +262,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -290,6 +295,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -320,6 +326,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -349,6 +356,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -380,6 +388,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -407,6 +416,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -438,6 +448,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -469,6 +480,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -500,6 +512,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -529,6 +542,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -562,6 +576,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -593,6 +608,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
@@ -625,6 +641,7 @@ namespace Praktine_Duombaziu.Data
             }
             catch (Exception exc)
             {
+                conn.Close();
                 Debug.WriteLine(exc.Message);
             }
 
